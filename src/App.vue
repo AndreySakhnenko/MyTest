@@ -1,8 +1,5 @@
 <template>
-  <HeaderTest
-    :tabs="burgerMenu"
-    :defPage="hamburgerMenu()"
-  ></HeaderTest>
+  <HeaderTest></HeaderTest>
   <main>
     <transition :name="transitionName">
       <router-view v-slot="{ Component, route }">
@@ -22,16 +19,6 @@ import HeaderTest from "./components/HeaderTest.vue";
 export default {
   components: {
     HeaderTest,
-  },
-  data() {
-    return {
-      burgerMenu: false,
-    };
-  },
-  methods: {
-    hamburgerMenu() {
-      this.burgerMenu = !this.burgerMenu;
-    },
   },
 };
 </script>
